@@ -23,16 +23,10 @@ def qiandao_xiami():
     session.headers.update(headers)
 
     resp = session.get('http://www.xiami.com/web/login')
-    print resp.text
+    print(resp.text)
     
     u = re.findall(r'class="name"', resp.text)
     p = re.findall(r'class="password"', resp.text)
-	'''
-    once_code = re.search(r'value="(\d+)" name="once"', resp.text).group(1)
-
-    resp = session.post('http://www.xiami.com/web/login', {u: xiami_username, p: xiami_password, 'once':once_code, 'next':'/'})
-    resp = session.get('http://www.xiami.com/web/checkin/id')
-    '''
 
 if __name__ == '__main__':
     qiandao_xiami()
