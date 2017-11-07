@@ -34,4 +34,5 @@ def qiandao_v2ex():
             print('Got daily gold.')
 
 if __name__ == '__main__':
-    qiandao_v2ex()
+    #qiandao_v2ex()
+	print('useless')
